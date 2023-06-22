@@ -18,11 +18,7 @@ MOV AL, [SI]
 CMP AL, [SI+1]
 
 JC C1           ; JNC C1 (For Decreasing order)
-
-MOV AH, AL
-MOV AL, [SI+1]
-MOV [SI+1], AH  ; Swap operation.
-; XCHG AL, [SI+1] ; Exhange current value with previous value.
+XCHG AL, [SI+1] ; Exhange current value with previous value.
 MOV [SI], AL   
 
 C1: 
